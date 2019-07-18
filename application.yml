@@ -4,13 +4,26 @@ spirng:
          - dev
 
 ---
+server;
+    port: 8201
+
 spring:
     profiles: dev
     application:
-        name: cloud-config-center-dev
-        
+        name: cloud-config-center
+dureka:
+    client:
+        service-url:
+            defaultZone: http://eureka7001-dev.com:7001/eureka/
 ---
+server;
+    port: 8202
+
 spring:
     profiles: test
     application:
-        name: cloud-config-center-test
+        name: cloud-config-center
+dureka:
+    client:
+        service-url:
+            defaultZone: http://eureka7001-test.com:7001/eureka/
