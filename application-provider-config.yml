@@ -44,7 +44,7 @@ eureka:
       
       
 info:
-   app.name: xiaoyao-cloud-producer
+   app.name: xiaoyao-cloud-producer-auto-config
    company.name: playstation
    build.artifactId: $project.artifactId$
    build.version: $project.version$
