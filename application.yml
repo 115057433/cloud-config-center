@@ -10,11 +10,16 @@ server:
 spring:
     profiles: dev
     application:
-        name: cloud-config-center
+        name: cloud-config-center-auto
 eureka:
     client:
         service-url:
             defaultZone: http://eureka7001.com:7001/eureka/
+    instance:
+        lease-renewal-interval-in-seconds: 10
+        lease-expiration-duration-in-seconds: 10
+        instance-id: config-center-auto-01
+        prefer-ip-address: true
 ---
 server:
     port: 8202
@@ -22,8 +27,13 @@ server:
 spring:
     profiles: test
     application:
-        name: cloud-config-center
+        name: cloud-config-center-auto
 eureka:
     client:
         service-url:
             defaultZone: http://eureka7002.com:7002/eureka/
+    instance:
+        lease-renewal-interval-in-seconds: 10
+        lease-expiration-duration-in-seconds: 10
+        instance-id: config-center-auto-02
+        prefer-ip-address: true
