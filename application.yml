@@ -10,7 +10,7 @@ server:
 spring:
     profiles: dev
     application:
-        name: cloud-config-center-auto-01
+        name: cloud-config-center-auto
 eureka:
     client:
         service-url:
@@ -27,7 +27,7 @@ server:
 spring:
     profiles: test
     application:
-        name: cloud-config-center-auto-01
+        name: cloud-config-center-auto
 eureka:
     client:
         service-url:
